@@ -199,11 +199,11 @@ export async function fetchSurveyData(url: string): Promise<SurveyResponse[]> {
     const arrayBuffer = await response.arrayBuffer();
     const workbook = XLSX.read(arrayBuffer, { type: 'array' });
     
-    const sheetName = workbook.SheetNames.find(n => 
-      n.toLowerCase().includes("risposte") || 
-      n.toLowerCase().includes("responses") ||
-      n === workbook.SheetNames[0]
-    );
+    const sheetName = workbook.SheetNames.find(n => n.toLowerCase() === "risposte") ||
+                      workbook.SheetNames.find(n => n.toLowerCase() === "responses") ||
+                      workbook.SheetNames.find(n => n.toLowerCase().includes("risposte")) ||
+                      workbook.SheetNames.find(n => n.toLowerCase().includes("responses")) ||
+                      workbook.SheetNames[0];
 
     if (!sheetName) return [];
 
