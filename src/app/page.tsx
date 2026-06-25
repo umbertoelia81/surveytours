@@ -6,7 +6,7 @@ import { fetchSurveyData } from "@/lib/survey-parser";
 import { SurveyDashboard } from "@/components/SurveyDashboard";
 import { RefreshCw, AlertCircle } from "lucide-react";
 
-const SURVEY_SHEET_URL = "https://docs.google.com/spreadsheets/d/1-NItsCY9xi9JDGIgajOfUgL6_opJheqy3xU24zu1GsI/edit?usp=sharing";
+const SURVEY_SHEET_URL = "https://docs.google.com/spreadsheets/d/10ExEWThLFG4YndMT4oymgOgMo6yCYSCHFJR-SrkN7Nw/edit?gid=1328934761#gid=1328934761";
 
 export default function Home() {
   const [data, setData] = useState<SurveyResponse[]>([]);
