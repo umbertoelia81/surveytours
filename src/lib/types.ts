@@ -1,0 +1,30 @@
+export interface SurveyResponse {
+  timestamp: string;
+  surveyTitle: string;
+  agenzia: string;
+  nome: string;
+  email: string;
+  telefono: string;
+  q1_conoscenza: string;
+  q2_aree: string[];
+  q3_rating_ovest: number;
+  q3_rating_est: number;
+  q3_rating_ricercata: number;
+  q4_durata: string;
+  q4_budget: string;
+  q4_note_budget?: string;
+  q5_inclusioni: string[];
+  q5_note_inclusioni?: string;
+  q6_hotel: string;
+  q7_tempo_libero: string;
+  q8_attivita: string[];
+  q9_rating_escursioni: string;
+  q9_tipologie: string[];
+  q10_trasporto: string;
+  q10_importanza_trasporto: number;
+  q11_prepost_utilita: string;
+  q11_esperienze: string[];
+  q12_followup: string;
+  q12_servizi: string[];
+  q13_commenti?: string;
+}
